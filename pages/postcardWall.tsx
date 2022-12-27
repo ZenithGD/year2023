@@ -1,114 +1,115 @@
 import { motion } from 'framer-motion'
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { animated, useTrail } from 'react-spring'
 import Postcard from '../components/web/Postcard'
-import { FaArrowCircleUp } from 'react-icons/fa'
+import { FaArrowCircleUp, FaPaintBrush } from 'react-icons/fa'
 
 const postcards = [
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
     {
         author: "aaa",
         sticker: 0,
-        content: "Contenido contenido"
+        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
     },
 ]
 
@@ -130,12 +131,31 @@ let variants = {
 let postcardVariant = {
     show: {
         opacity: 1,
-        scale: 1
+        scale: 1,
+        transition: {
+            ease: "easeOut",
+            duration: 0.5
+        }
     },
     hide: {
         opacity: 0,
-        scale: 0.2,
-        rotate: -45
+        scale: 0.5,
+
+    }
+}
+
+let buttonVariant = {
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            ease: 'easeOut',
+            duration: 0.5
+        }
+    },
+    hide: {
+        y: 100,
+        opacity: 0
     }
 }
 
@@ -180,11 +200,12 @@ function PostcardWall() {
                             key={key}
                             style={props}
                         >
-                            <button className="w-full h-full" onClick={() => setSelectedId(key)}>
+                            <button className="w-full h-24" onClick={() => setSelectedId(key)}>
                                 <Postcard
                                     author={postcards[key].author}
                                     content={postcards[key].content}
                                     sticker={postcards[key].sticker}
+                                    likes={key}
                                 />
                             </button>
                         </animated.div>
@@ -197,30 +218,43 @@ function PostcardWall() {
                     animate={hasScroll && selectedId < 0 ? "show" : "hide"}
                     variants={variants}
                     initial={"hide"}
-                    className="fixed top-0 mt-5 z-50"
+                    className="fixed top-0 mt-5 z-10"
                 >
-                    <button className="py-2 px-3 text-sm font-bold bg-white flex justify-center items-center gap-2 rounded-full shadow-md">
-                        <FaArrowCircleUp className='text-green-900' />
-                        <p
-                            className="text-green-900 z-10"
-                            onClick={() => setGoTop(true)}
-                        >
+                    <button className="bg-gradient-to-b from-green-500 to-green-700 py-2 px-3 text-sm font-bold flex justify-center items-center gap-2 rounded-full shadow-lg hover:scale-105 transition-transform duration-150">
+                        <FaArrowCircleUp/>
+                        <p onClick={() => setGoTop(true)} >
                             Ir al principio
                         </p>
                     </button>
                 </motion.div>
 
                 <div className="fixed top-0 h-0">
-                    <motion.div 
+                    <motion.div
                         animate={selectedId >= 0 ? "show" : "hide"}
-                        className="m-10 bg-green-400"
+                        className={`p-10 h-screen w-screen backdrop-blur-sm ${selectedId >= 0 ? "" : "pointer-events-none"}`}
                         variants={postcardVariant}
-                        initial="hidden"
+                        initial="hide"
                     >
-                        <p>detalle</p>
-                        <button onClick={() => setSelectedId(-1)}>cerrar</button>
+                        <div className="w-full h-full bg-green-400">
+                            <p>detalle</p>
+                            <button onClick={() => setSelectedId(-1)}>cerrar</button>
+                        </div>
                     </motion.div>
                 </div>
+
+                <motion.div
+                    className="mb-5 fixed bottom-0"
+                    variants={buttonVariant}
+                    initial="hide"
+                    animate="show"
+                >
+                    <Link href="/create">
+                        <button className="bg-gradient-to-b from-green-500 to-green-700 py-2 px-3 text-sm font-bold flex justify-center items-center gap-2 rounded-full shadow-lg hover:scale-105 transition-transform duration-150">
+                            <FaPaintBrush className="" />
+                            <p>Crear postal</p>
+                        </button>
+                    </Link>
+                </motion.div>
             </div>
         </>
     )
