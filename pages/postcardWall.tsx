@@ -4,114 +4,9 @@ import Link from 'next/link'
 import { animated, useTrail } from 'react-spring'
 import Postcard from '../components/web/Postcard'
 import { FaArrowCircleUp, FaPaintBrush } from 'react-icons/fa'
-
-const postcards = [
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-    {
-        author: "aaa",
-        sticker: 0,
-        content: "Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido Contenido contenido"
-    },
-]
+import postcardService from '../lib/services/postcardService'
+import useSWR from "swr";
+import stickers from '../lib/models/stickers'
 
 let variants = {
     show: {
@@ -159,18 +54,26 @@ let buttonVariant = {
     }
 }
 
+let containerVariant = {
+    show: {
+        opacity: 1,
+        transition: {
+            ease: 'easeOut',
+            duration: 0.5
+        }
+    },
+    hide: {
+        opacity: 0
+    }
+}
+
 function PostcardWall() {
+
     const [selectedId, setSelectedId] = useState(-1)
     const [hasScroll, setHasScroll] = useState(false);
     const [goTop, setGoTop] = useState(false);
 
-    const config = { tension: 2000, friction: 100 };
-    const trail = useTrail(postcards.length, {
-        config,
-        opacity: 1,
-        scale: 1,
-        from: { opacity: 0, scale: 0.5 },
-    });
+    const { data : postcards, error, isLoading } = useSWR('/api/postcards', postcardService.getAllPostcards)
 
     useEffect(() => {
         // Client-side-only code
@@ -193,24 +96,37 @@ function PostcardWall() {
 
     return (
         <>
-            <main className="lg:p-16 p-6 w-full flex items-center flex-col bg-center bg-[url(/img/bgmain.png)] min-h-screen">
-                <motion.div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-16">
-                    {trail.map((props, key) =>
-                        <animated.div
-                            key={key}
-                            style={props}
+            <main className="lg:p-16 md:p-12 p-6 w-full flex items-center flex-col bg-center bg-[url(/img/bgmain.png)] min-h-screen">
+                <h1 className='mb-12 text-4xl font-bold'>Postales</h1>
+                { isLoading ? (
+                    <p>Cargando postales...</p>
+                ) : (
+                    error ? (
+                        <p>No se han podido cargar las postales</p>
+                    ) : (
+                        <motion.div 
+                            className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-16"
+                            variants={containerVariant}
+                            initial="hide"
+                            animate="show"
                         >
-                            <button className="w-full h-24" onClick={() => setSelectedId(key)}>
-                                <Postcard
-                                    author={postcards[key].author}
-                                    content={postcards[key].content}
-                                    sticker={postcards[key].sticker}
-                                    likes={key}
-                                />
-                            </button>
-                        </animated.div>
-                    )}
-                </motion.div>
+                            {postcards.map((card : any, key : number) =>
+                                <motion.div
+                                    variants={postcardVariant}
+                                >
+                                    <button className="w-full h-24" onClick={() => setSelectedId(key)}>
+                                        <Postcard
+                                            author={card.author}
+                                            content={card.content}
+                                            sticker={stickers[card.sticker]}
+                                            likes={key}
+                                        />
+                                    </button>
+                                </motion.div>
+                            )}
+                        </motion.div>
+                    )
+                )}
             </main>
 
             <div className="fixed w-screen h-0 flex flex-col items-center m-0 z-0">
