@@ -21,7 +21,7 @@ const checkVariant = {
     }
 }
 
-function create() {
+function Create() {
 
     const [author, setAuthor] = useState("Anónimo")
     const [content, setContent] = useState("")
@@ -121,4 +121,4 @@ function create() {
     )
 }
 
-export default create
+export default Create

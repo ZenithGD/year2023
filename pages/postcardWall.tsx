@@ -113,6 +113,7 @@ function PostcardWall() {
                             {postcards.map((card : any, key : number) =>
                                 <motion.div
                                     variants={postcardVariant}
+                                    key={key}
                                 >
                                     <button className="w-full h-24" onClick={() => setSelectedId(key)}>
                                         <Postcard

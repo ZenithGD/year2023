@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import ginger from "../public/img/stickers/gingerbread-man.png"
 
-function credits() {
+function Credits() {
     return (
         <main className="lg:p-16 p-6 w-full flex items-center flex-col bg-center bg-[url(/img/bgmain.png)] min-h-screen">
             <h1 className="text-4xl font-bold">Crear postal</h1>
@@ -24,4 +24,4 @@ function credits() {
     )
 }
 
-export default credits
+export default Credits
