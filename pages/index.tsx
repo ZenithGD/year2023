@@ -22,8 +22,8 @@ export default function Home() {
                 {/*<PixiShootingStars />*/}
             </div>
             <Snowfall snowflakeCount={100} color="#dcfce7" speed={[0.5, 8]} wind={[-0.5, 3]} />
-            <main className="lg:p-18 flex justify-center items-center flex-col bg-center bg-[url(/img/bgmain.png)] min-h-screen">
-                <h1 className="text-justify text-8xl font-christmas">
+            <main className="lg:p-18 p-12 flex justify-center items-center flex-col bg-center bg-[url(/img/bgmain.png)] min-h-screen">
+                <h1 className="text-justify lg:text-8xl text-4xl font-christmas">
                     El muro de los deseos
                 </h1>
                 <div className="py-8 flex lg:flex-row flex-col align-center gap-16">
@@ -34,8 +34,8 @@ export default function Home() {
                 </div>
                 <div>
                     <Link href="postcardWall" passHref>
-                        <button className="p-3 bg-green-100 rounded-md shadow-lg shadow-green-300/40 transition ease-in-out delay-150 hover:scale-110 hover:bg-green-200 duration-300">
-                            <p className="text-green-800 text-sm font-bold drop-shadow-lg">Ir al muro</p>
+                        <button className="bg-gradient-to-b from-green-500 to-green-700 py-2 px-3 text-sm font-bold flex justify-center items-center gap-2 rounded-full shadow-lg hover:scale-105 transition-transform duration-150">
+                            <p className="text-white text-sm font-bold drop-shadow-lg">Ir al muro</p>
                         </button>
                     </Link>
                 </div>

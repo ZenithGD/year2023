@@ -14,7 +14,7 @@ interface PostcardProps {
     likes: number,
 }
 
-function Postcard(props: PostcardProps) {
+function PostcardPreview(props: PostcardProps) {
 
     return (
         <div className='relative flex justify-center hover:scale-105 transition-transform duration-150'>
@@ -28,11 +28,11 @@ function Postcard(props: PostcardProps) {
                 </div>
                 <p className="flex-1 p-4 truncate text-ellipsis overflow-hidden break-all">{props.content}</p>
             </div>
-            <div className='absolute top-0 -translate-y-1/2 border-white border-4 bg-green-400 p-2 rounded-full'>
-                <Image src={props.sticker.source} alt={props.sticker.name} width={50}/>
+            <div className='absolute top-0 -translate-y-2/3 border-white border-4 bg-green-400 p-2 rounded-full'>
+                <Image src={props.sticker.source} alt={props.sticker.name} width={30}/>
             </div>
         </div>
     )
 }
 
-export default Postcard
+export default PostcardPreview

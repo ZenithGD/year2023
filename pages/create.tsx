@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Postcard from '../components/web/Postcard'
+import PostcardPreview from '../components/web/PostcardPreview'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { FaCheck } from 'react-icons/fa'
@@ -54,6 +54,13 @@ function Create() {
         }
     }
 
+    const handleBackButton = (e : any) => {
+        e.preventDefault()
+        router.push({
+            pathname : "/postcardWall"
+        })
+    }
+
     return (
         <main className="lg:p-16 p-6 w-full flex items-center flex-col bg-center bg-[url(/img/bgmain.png)] min-h-screen">
             <h1 className="text-4xl font-bold">Crear postal</h1>
@@ -105,16 +112,24 @@ function Create() {
                                 ))}
                             </div>
                         </div>
-                        <button 
-                            type="submit"
-                            className="bg-gradient-to-b from-green-500 to-green-700 py-2 px-3 text-sm font-bold flex justify-center items-center gap-2 rounded-full shadow-lg hover:scale-105 transition-transform duration-150"
-                        >
-                            Crear postal
-                        </button>
+                        <div className='w-full flex justify-between'>
+                            <button 
+                                onClick={handleBackButton}
+                                className="bg-gradient-to-b from-red-500 to-red-700 py-2 px-3 text-sm font-bold flex justify-center items-center gap-2 rounded-full shadow-lg hover:scale-105 transition-transform duration-150"
+                            >
+                                Volver al muro
+                            </button>
+                            <button 
+                                type="submit"
+                                className="bg-gradient-to-b from-green-500 to-green-700 py-2 px-3 text-sm font-bold flex justify-center items-center gap-2 rounded-full shadow-lg hover:scale-105 transition-transform duration-150"
+                            >
+                                Crear postal
+                            </button>
+                        </div>
                     </form>
                 </div>
                 <div className="lg:w-1/2 w-full">
-                    <Postcard author={author} content={content} sticker={stickers[sticker]} likes={123}/>
+                    <PostcardPreview author={author} content={content} sticker={stickers[sticker]} likes={123}/>
                 </div>
             </div>
         </main>
