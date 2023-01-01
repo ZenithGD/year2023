@@ -9,12 +9,6 @@ export default async function postcardHandler(
   res: NextApiResponse
 ) {
     switch ( req.method ) {
-        case "GET":
-        {
-            const { status, result } = await postcardController.getPostcardByID( new ObjectId(req.query.id as string) ) 
-            res.status(status).json(result)
-            return
-        }
         case "POST":
         {
             const { author, content, sticker } = JSON.parse(req.body)
@@ -25,12 +19,6 @@ export default async function postcardHandler(
         default:
             res.status(StatusCodes.METHOD_NOT_ALLOWED).json({
                 relativePath: "/api/postcard",
-                get : {
-                    relativePath: "/{id}",
-                    param : {
-                        id : "number"
-                    }
-                },
                 post : {
                     params : {
                         author : "string",

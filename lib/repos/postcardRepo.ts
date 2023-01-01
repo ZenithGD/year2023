@@ -61,10 +61,26 @@ async function insert(author : string, content : string, sticker : number) {
     return result
 }
 
+
+async function incrementLike(id : ObjectId, amount : number) {
+    const client = await mongo.connect();
+    const db = client.db(process.env.DB_NAME!);
+
+    const result = await db
+        .collection<Postcard>(process.env.POSTCARDS_COLLECTION_NAME!)
+        .updateOne(
+        { id: id },
+        { $inc: { quantity: amount, likes: 1 } }
+    )
+
+    return result
+}
+
 let postcardRepo = {
     findAll,
     findByID,
-    insert
+    insert,
+    incrementLike
 }
 
 export default postcardRepo

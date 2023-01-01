@@ -11,7 +11,13 @@ export default async function postcardHandler(
     switch ( req.method ) {
         case "GET":
         {
-            const { status, result } = await postcardController.getPostcardByID( new ObjectId(req.query.id as string) ) 
+            const { status, result } = await postcardController.getPostcardByID( req.query.id ) 
+            res.status(status).json(result)
+            return
+        }
+        case "PUT":
+        {
+            const { status, result } = await postcardController.likePostcard( req.query.id )
             res.status(status).json(result)
             return
         }
@@ -19,6 +25,7 @@ export default async function postcardHandler(
             res.status(StatusCodes.METHOD_NOT_ALLOWED).json({
                 relativePath: "/api/postcards/{id}",
                 get : {},
+                put : {},
             })
     }
 }
