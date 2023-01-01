@@ -33,10 +33,10 @@ function Create() {
         e.preventDefault()
         postcardService.postPostcard(author, content, sticker)
             .then(v => {
-                toast.success("¡Se ha creado la postal correctamente!")
+                toast.success("¡Se ha creado la postal correctamente! En breves aparecerá en el mural.")
                 router.push({
                     pathname : "/postcardWall",
-                    query : v.id
+                    query : v._id
                 })
             })
             .catch(e => {
