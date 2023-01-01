@@ -30,7 +30,7 @@ export default function Home() {
                     <div className="whitespace-pre-line">
                         Con esta pequeña página web, aprovecho para desearte un feliz Año Nuevo, a la vez que te invito a participar en ella.
                         
-                        La he llamado <span className="font-bold">"El muro de los deseos"</span>, y puedes crear tu propia postal para colgarla y difundirla a todos los visitantes de la página.
+                        La he llamado <span className="font-bold">El muro de los deseos</span>, y puedes crear tu propia postal para colgarla y difundirla a todos los visitantes de la página.
 
                         Así, todos juntos podemos crear una red de deseos para conocerlos... ¡y conocernos!
                     </div>
