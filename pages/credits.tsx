@@ -19,6 +19,15 @@ function Credits() {
                 <a href="https://www.flaticon.com/free-icons/christmas" title="christmas icons">
                     Candy cane created by Freepik - Flaticon
                 </a>
+                <a href="https://www.flaticon.com/free-icons/clover" title="clover icons">
+                    Clover icons created by Freepik - Flaticon
+                </a>
+                <a href="https://www.flaticon.com/free-icons/smile" title="smile icons">
+                    Smile icons created by Pixel perfect - Flaticon
+                </a>
+                <a href="https://www.flaticon.com/free-icons/smile" title="smile icons">
+                    Smile icons created by Vectors Market - Flaticon
+                </a>
             </div>
         </main>
     )

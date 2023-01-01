@@ -68,7 +68,7 @@ function Create() {
                 <div className="bg-green-800 p-4 flex-1 self-stretch rounded-lg">
                     <form 
                         onSubmit={handleSubmit} 
-                        className="flex flex-col justify-between h-full items-center"
+                        className="flex flex-col justify-around h-full items-center"
                     >
                         <div className="w-full">
                             <label>Autor</label>
@@ -90,9 +90,9 @@ function Create() {
                             <label>Pegatina</label>
                             <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-3 my-2 gap-4 ">
                                 {stickers.map((stickerInfo, id) => (
-                                    <div className='relative hover:scale-105 transition-transform duration-150 w-full' key={id}>
+                                    <div className='relative hover:scale-105 transition-transform duration-150 w-full h-full' key={id}>
                                         <button 
-                                            className='bg-green-100 flex flex-col items-center p-2 rounded-md w-full'
+                                            className='bg-green-100 flex flex-col justify-around items-center p-2 rounded-md w-full h-full gap-1'
                                             onClick={(e) => { e.preventDefault(); setSticker(id) }}
                                         >
                                             <Image src={stickerInfo.source} alt={`Pegatina ${stickerInfo.name}`} width={35}/>
@@ -112,7 +112,7 @@ function Create() {
                                 ))}
                             </div>
                         </div>
-                        <div className='w-full flex justify-between'>
+                        <div className='w-full flex justify-between mt-4'>
                             <button 
                                 onClick={handleBackButton}
                                 className="bg-gradient-to-b from-red-500 to-red-700 py-2 px-3 text-sm font-bold flex justify-center items-center gap-2 rounded-full shadow-lg hover:scale-105 transition-transform duration-150"
@@ -128,7 +128,8 @@ function Create() {
                         </div>
                     </form>
                 </div>
-                <div className="lg:w-1/2 w-full">
+                <div className="lg:w-1/2 w-full flex flex-col">
+                    <h2 className='text-xl mb-12 text-center'>Así se verá tu postal:</h2>
                     <PostcardPreview author={author} content={content} sticker={stickers[sticker]} likes={123}/>
                 </div>
             </div>

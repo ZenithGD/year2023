@@ -66,14 +66,14 @@ async function incrementLike(id : ObjectId, amount : number) {
     const client = await mongo.connect();
     const db = client.db(process.env.DB_NAME!);
 
-    const result = await db
+    console.log(id)
+
+    return await db
         .collection<Postcard>(process.env.POSTCARDS_COLLECTION_NAME!)
         .updateOne(
-        { id: id },
-        { $inc: { quantity: amount, likes: 1 } }
+        { _id: id },
+        { $inc: { likes: amount }, }
     )
-
-    return result
 }
 
 let postcardRepo = {

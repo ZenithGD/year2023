@@ -79,13 +79,14 @@ function PostcardWall() {
         isLoading,
     } = useSWR<Postcard[]>("/api/postcards", postcardService.getAllPostcards);
 
+    // on scroll event update the state
     useEffect(() => {
-        // Client-side-only code
         window.addEventListener("scroll", () => {
             setHasScroll(window.scrollY > 0);
         });
     }, []);
 
+    // go to the top of the page
     useEffect(() => {
         if (goTop) {
             window.scrollTo({
@@ -97,6 +98,14 @@ function PostcardWall() {
             setGoTop(false);
         }
     }, [goTop]);
+
+    // disable scroll if modal is open
+    useEffect(() => {
+        if (selectedId >= 0)
+            document.body.style.overflow = 'hidden'
+        else 
+            document.body.style.overflow = 'unset'
+    }, [selectedId]);
 
     return (
         <>
@@ -159,7 +168,7 @@ function PostcardWall() {
                         variants={postcardVariant}
                         initial="hide"
                     >
-                        <div className="w-full h-full bg-green-400">
+                        <div className="w-full h-full overflow-y-scroll bg-green-400">
                             { postcards !== undefined && selectedId >= 0 && <PostcardDetail onClose={() => setSelectedId(-1)} postcard={postcards[selectedId]} /> }
                         </div>
                     </motion.div>

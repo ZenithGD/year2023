@@ -22,13 +22,17 @@ export default function Home() {
                 {/*<PixiShootingStars />*/}
             </div>
             <Snowfall snowflakeCount={100} color="#dcfce7" speed={[0.5, 8]} wind={[-0.5, 3]} />
-            <main className="lg:p-18 p-12 flex justify-center items-center flex-col bg-center bg-[url(/img/bgmain.png)] min-h-screen">
+            <main className="lg:p-24 p-12 flex justify-center items-center flex-col bg-center bg-[url(/img/bgmain.png)] min-h-screen">
                 <h1 className="text-justify lg:text-8xl text-4xl font-christmas">
                     El muro de los deseos
                 </h1>
-                <div className="py-8 flex lg:flex-row flex-col align-center gap-16">
-                    <div>
-                        Texto texto Texto texto Texto texto Texto texto Texto texto Texto texto Texto texto 
+                <div className="py-8 flex lg:flex-row flex-col items-center gap-16">
+                    <div className="whitespace-pre-line">
+                        Con esta pequeña página web, aprovecho para desearte un feliz Año Nuevo, a la vez que te invito a participar en ella.
+                        
+                        La he llamado <span className="font-bold">"El muro de los deseos"</span>, y puedes crear tu propia postal para colgarla y difundirla a todos los visitantes de la página.
+
+                        Así, todos juntos podemos crear una red de deseos para conocerlos... ¡y conocernos!
                     </div>
                     <Image src={postcardImgSrc} alt="Postcard image" priority/>
                 </div>

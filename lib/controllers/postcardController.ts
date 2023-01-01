@@ -29,15 +29,15 @@ async function insertPostcard(author : string, content : string, sticker : numbe
     }
 }
 
-async function getPostcardByID(id : string) {
+async function getPostcardByID(id : string ) {
     if ( id === null ) {
         return { status : StatusCodes.BAD_REQUEST, result : { error : "Enter a valid id" } }
     }
 
     try {
         const result = await postcardRepo.findByID(new ObjectId(id))
-        if ( result )
-            return { status : StatusCodes.OK, result }
+        if ( result !== null )
+            return { status : StatusCodes.OK,  }
         else
             return { status : StatusCodes.NOT_FOUND, result : { error : `[${id}] postcard not found.`}}
     } catch ( e : any ) {
@@ -45,14 +45,14 @@ async function getPostcardByID(id : string) {
     }
 }
 
-async function likePostcard(id : string) {
+async function likePostcard(id : string ) {
     if ( id === null ) {
         return { status : StatusCodes.BAD_REQUEST, result : { error : "Enter a valid id" } }
     }
 
     try {
-        const result = await postcardRepo.incrementLike(new ObjectId(id), 1)
-        if ( result )
+        const result = await postcardRepo.incrementLike(new ObjectId(id!), 1)
+        if ( result.modifiedCount > 0 )
             return { status : StatusCodes.OK, result }
         else
             return { status : StatusCodes.NOT_FOUND, result : { error : `[${id}] postcard not found.`}}

@@ -7,5 +7,5 @@ export default interface Postcard {
     likes: number,
     validated: boolean,
     accepted: boolean,
-    id?: ObjectId
+    _id: ObjectId
 }
