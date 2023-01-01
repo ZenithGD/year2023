@@ -47,8 +47,8 @@ async function insert(author : string, content : string, sticker : number) {
     const client = await mongo.connect();
     const db = client.db(process.env.DB_NAME!);
 
-    const result = await db
-        .collection<Postcard>(process.env.POSTCARDS_COLLECTION_NAME!)
+    const result = db
+        .collection(process.env.POSTCARDS_COLLECTION_NAME!)
         .insertOne({
             author,
             content,
